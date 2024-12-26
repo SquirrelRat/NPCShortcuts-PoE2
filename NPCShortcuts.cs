@@ -4,6 +4,8 @@ using ExileCore2.PoEMemory;
 using ExileCore2.PoEMemory.Elements;
 using ExileCore2.PoEMemory.MemoryObjects;
 using Vector2 = System.Numerics.Vector2;
+using System.Drawing;
+using System.Linq;
 
 namespace NPCShortcuts
 {
@@ -14,45 +16,58 @@ namespace NPCShortcuts
             return true;
         }
 
-		public override void Render()
-		{
-			var labelHover = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.LabelOnHover;
-			if (labelHover == null) return;
+        public override void Render()
+        {
+            var labelHover = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.LabelOnHover;
+            if (labelHover == null) return;
 
-			var hoverPath = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.ItemOnHoverPath;
-			if (hoverPath == null) return;
+            var hoverPath = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.ItemOnHoverPath;
+            if (hoverPath == null) return;
 
-			if (NPCDatabase.NPCDictionary.ContainsKey(hoverPath))
-		{
-			if (NPCDatabase.NPCDictionary.TryGetValue(hoverPath, out var npc))
-			{
-				DrawShortcuts(npc, labelHover);
-			}
-		}
-	}
-
+            if (NPCDatabase.NPCDictionary.ContainsKey(hoverPath))
+            {
+                if (NPCDatabase.NPCDictionary.TryGetValue(hoverPath, out var npc))
+                {
+                    DrawShortcuts(npc, labelHover);
+                }
+            }
+        }
 
         private void DrawShortcuts(NPC npc, Element label)
         {
             var labelRect = label.GetClientRectCache;
-
             var separator = "  ";
-            var stringToDisplay = string.Empty;
 
-            if (npc.Ctrl != null) stringToDisplay += "Ctrl: " + npc.Ctrl;
-            if (npc.Alt != null) stringToDisplay += separator + "Alt: " + npc.Alt;
-            if (npc.CtrlAlt != null) stringToDisplay += separator + "CtrlAlt: " + npc.CtrlAlt;
+            var segments = new List<(string text, Color color)>();
 
-            var textSize = Graphics.MeasureText(stringToDisplay);
+            if (npc.Ctrl != null)
+            {
+                segments.Add(("Ctrl", Settings.CtrlColor.Value));
+                segments.Add((": " + npc.Ctrl, Settings.TextColor.Value));
+            }
 
-            var boxPos = new Vector2(labelRect.Center.X - textSize.X / 2, labelRect.Top - textSize.Y - 5);
-            var boxSize = new Vector2(textSize.X, textSize.Y);
+            if (npc.Alt != null)
+            {
+                segments.Add((separator + "Alt", Settings.AltColor.Value));
+                segments.Add((": " + npc.Alt, Settings.TextColor.Value));
+            }
 
-            var backgroundColor = Settings.BackgroundColor.Value;
-            var textColor = Settings.TextColor.Value;
+            if (npc.CtrlAlt != null)
+            {
+                segments.Add((separator + "CtrlAlt", Settings.CtrlAltColor.Value));
+                segments.Add((": " + npc.CtrlAlt, Settings.TextColor.Value));
+            }
 
-            // Use DrawTextWithBackground
-            Graphics.DrawTextWithBackground(stringToDisplay, boxPos, textColor, backgroundColor);
+            var fullText = string.Concat(segments.Select(s => s.text));
+            var textSize = Graphics.MeasureText(fullText);
+            var startX = labelRect.Center.X - textSize.X / 2;
+            var y = labelRect.Top - textSize.Y - 5;
+
+            foreach (var segment in segments)
+            {
+                Graphics.DrawTextWithBackground(segment.text, new Vector2(startX, y), segment.color, Settings.BackgroundColor.Value);
+                startX += Graphics.MeasureText(segment.text).X;
+            }
         }
     }
 }
