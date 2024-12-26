@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using ExileCore2;
 using ExileCore2.PoEMemory;
 using ExileCore2.PoEMemory.Elements;
 using ExileCore2.PoEMemory.MemoryObjects;
-using System.Drawing;
 using Vector2 = System.Numerics.Vector2;
-using RectangleF = ExileCore2.Shared.RectangleF;
 
 namespace NPCShortcuts
 {
@@ -18,16 +14,23 @@ namespace NPCShortcuts
             return true;
         }
 
-        public override void Render()
-        {
-            var labelHover = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.LabelOnHover;
-            if (labelHover == null) return;
+		public override void Render()
+		{
+			var labelHover = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.LabelOnHover;
+			if (labelHover == null) return;
 
-            var hoverPath = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.ItemOnHoverPath;
-            if (!NPCDatabase.NPCDictionary.TryGetValue(hoverPath, out var npc)) return;
+			var hoverPath = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.ItemOnHoverPath;
+			if (hoverPath == null) return;
 
-            DrawShortcuts(npc, labelHover);
-        }
+			if (NPCDatabase.NPCDictionary.ContainsKey(hoverPath))
+		{
+			if (NPCDatabase.NPCDictionary.TryGetValue(hoverPath, out var npc))
+			{
+				DrawShortcuts(npc, labelHover);
+			}
+		}
+	}
+
 
         private void DrawShortcuts(NPC npc, Element label)
         {

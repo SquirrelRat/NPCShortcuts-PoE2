@@ -8,59 +8,6 @@ namespace NPCShortcuts
         {
             // Act 1
             {
-                "Metadata/NPC/Four_Act1/Una", new NPC
-                {
-                    Name = "Una",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act1/UnaAfterHealHoodedMentor", new NPC
-                {
-                    Name = "Una",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act1/UnaAfterIronCount", new NPC
-                {
-                    Name = "Una",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act1/UnaHoodedOneInjured", new NPC
-                {
-                    Name = "Una",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act1/Renly", new NPC
-                {
-                    Name = "Renly",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act1/RenlyAfterIronCount", new NPC
-                {
-                    Name = "Renly",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act1/RenlyIntro", new NPC
-                {
-                    Name = "Renly",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
                 "Metadata/NPC/Four_Act1/Finn", new NPC
                 {
                     Name = "Finn",
@@ -98,31 +45,61 @@ namespace NPCShortcuts
                     Alt = "Refund Passives"
                 }
             },
-
-            
-            // Act 2
             {
-                "Metadata/NPC/Four_Act2/MarakethTrader", new NPC
+                "Metadata/NPC/Four_Act1/Renly", new NPC
                 {
-                    Name = "Shambrin",
+                    Name = "Renly",
                     Ctrl = "Buy / Sell"
                 }
             },
             {
-                "Metadata/NPC/Four_Act2/MarakethMystic", new NPC
+                "Metadata/NPC/Four_Act1/RenlyAfterIronCount", new NPC
                 {
-                    Name = "Zarka",
+                    Name = "Renly",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act1/RenlyIntro", new NPC
+                {
+                    Name = "Renly",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act1/Una", new NPC
+                {
+                    Name = "Una",
                     Ctrl = "Disenchant",
                     Alt = "Buy / Sell"
                 }
             },
             {
-                "Metadata/NPC/Four_Act2/RisuCaravan", new NPC
+                "Metadata/NPC/Four_Act1/UnaAfterHealHoodedMentor", new NPC
                 {
-                    Name = "Risu",
-                    Alt = "Gamble"
+                    Name = "Una",
+                    Ctrl = "Disenchant",
+                    Alt = "Buy / Sell"
                 }
             },
+            {
+                "Metadata/NPC/Four_Act1/UnaAfterIronCount", new NPC
+                {
+                    Name = "Una",
+                    Ctrl = "Disenchant",
+                    Alt = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act1/UnaHoodedOneInjured", new NPC
+                {
+                    Name = "Una",
+                    Ctrl = "Disenchant",
+                    Alt = "Buy / Sell"
+                }
+            },
+            
+            // Act 2
             {
                 "Metadata/NPC/Four_Act2/HoodedMentorCaravan", new NPC
                 {
@@ -140,59 +117,36 @@ namespace NPCShortcuts
                 }
             },
             {
+                "Metadata/NPC/Four_Act2/RisuCaravan", new NPC
+                {
+                    Name = "Risu",
+                    Alt = "Gamble"
+                }
+            },
+            {
                 "Metadata/NPC/Four_Act2/RisuCouncil", new NPC
                 {
                     Name = "Risu",
                     Alt = "Gamble"
                 }
             },
+            {
+                "Metadata/NPC/Four_Act2/MarakethTrader", new NPC
+                {
+                    Name = "Shambrin",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act2/MarakethMystic", new NPC
+                {
+                    Name = "Zarka",
+                    Ctrl = "Disenchant",
+                    Alt = "Buy / Sell"
+                }
+            },
             
             // Act 3
-            {
-                "Metadata/NPC/Four_Act3/OswaldZigguratEncampmentAfterTimePortalEntered", new NPC
-                {
-                    Name = "Oswald",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act3/OswaldZigguratEncampmentNearTimePortal", new NPC
-                {
-                    Name = "Oswald",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act3/OswaldZigguratEncampment", new NPC
-                {
-                    Name = "Oswald",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act3/ServiZigguratEncampment", new NPC
-                {
-                    Name = "Servi",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act3/ServiZigguratEncampmentNearTimePortal", new NPC
-                {
-                    Name = "Servi",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act3/ServiZigguratEncampmentAfterTimePortalEntered", new NPC
-                {
-                    Name = "Servi",
-                    Ctrl = "Disenchant",
-                    Alt = "Buy / Sell"
-                }
-            },
             {
                 "Metadata/NPC/Four_Act3/AlvaZigguratEncampment", new NPC
                 {
@@ -201,14 +155,21 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentEntered", new NPC
+                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentAfterTimePortalEntered", new NPC
                 {
                     Name = "Alva",
                     Alt = "Gamble"
                 }
             },
             {
-                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentZigguratKeyHeld", new NPC
+                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentCapturedDoryani", new NPC
+                {
+                    Name = "Alva",
+                    Alt = "Gamble"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentEntered", new NPC
                 {
                     Name = "Alva",
                     Alt = "Gamble"
@@ -236,21 +197,23 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentCapturedDoryani", new NPC
+                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentZigguratKeyHeld", new NPC
                 {
                     Name = "Alva",
                     Alt = "Gamble"
                 }
             },
             {
-                "Metadata/NPC/Four_Act3/AlvaZigguratEncampmentAfterTimePortalEntered", new NPC
+                "Metadata/NPC/Four_Act3/DoryaniEndgameTown", new NPC
                 {
-                    Name = "Alva",
-                    Alt = "Gamble"
+                    Name = "Doryani",
+                    Ctrl = "Identify All",
+                    Alt = "Buy / Sell",
+                    CtrlAlt = "Refund Atlas"
                 }
             },
             {
-                "Metadata/NPC/Four_Act3/HoodedMentorZigguratEncampmentWater", new NPC
+                "Metadata/NPC/Four_Act3/HoodedMentorZigguratEncampmentAfterTimePortalEntered", new NPC
                 {
                     Name = "The Hooded One",
                     Ctrl = "Identify",
@@ -266,23 +229,60 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Four_Act3/HoodedMentorZigguratEncampmentAfterTimePortalEntered", new NPC
+                "Metadata/NPC/Four_Act3/HoodedMentorZigguratEncampmentWater", new NPC
                 {
                     Name = "The Hooded One",
                     Ctrl = "Identify",
                     Alt = "Refund Passives"
                 }
             },
-            
-            // Endgame
             {
-                "Metadata/NPC/Four_Endgame/Vaal/VaalTimeScientist", new NPC
+                "Metadata/NPC/Four_Act3/OswaldZigguratEncampment", new NPC
                 {
-                    Name = "Ketzuli, Architect of Time",
+                    Name = "Oswald",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act3/OswaldZigguratEncampmentAfterTimePortalEntered", new NPC
+                {
+                    Name = "Oswald",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act3/OswaldZigguratEncampmentNearTimePortal", new NPC
+                {
+                    Name = "Oswald",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act3/ServiZigguratEncampment", new NPC
+                {
+                    Name = "Servi",
                     Ctrl = "Disenchant",
                     Alt = "Buy / Sell"
                 }
             },
+            {
+                "Metadata/NPC/Four_Act3/ServiZigguratEncampmentAfterTimePortalEntered", new NPC
+                {
+                    Name = "Servi",
+                    Ctrl = "Disenchant",
+                    Alt = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Act3/ServiZigguratEncampmentNearTimePortal", new NPC
+                {
+                    Name = "Servi",
+                    Ctrl = "Disenchant",
+                    Alt = "Buy / Sell"
+                }
+            },
+            
+            // Endgame
             {
                 "Metadata/NPC/Four_Endgame/Alva", new NPC
                 {
@@ -291,16 +291,16 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Four_Endgame/Expedition/Tujen", new NPC
+                "Metadata/NPC/Four_Endgame/AlvaPlayerWakeup", new NPC
                 {
-                    Name = "Tujen",
-                    Ctrl = "Buy / Sell"
+                    Name = "Alva",
+                    Alt = "Gamble"
                 }
             },
             {
-                "Metadata/NPC/Four_Endgame/Expedition/Rog", new NPC
+                "Metadata/NPC/Four_Endgame/Bloodpriests/BloodPriestFemale", new NPC
                 {
-                    Name = "Rog",
+                    Name = "Atalui, Blood Priestess",
                     Ctrl = "Buy / Sell"
                 }
             },
@@ -313,46 +313,38 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Four_Endgame/Bloodpriests/BloodPriestFemale", new NPC
-                {
-                    Name = "Atalui, Blood Priestess",
-                    Ctrl = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Endgame/AlvaPlayerWakeup", new NPC
-                {
-                    Name = "Alva",
-                    Alt = "Gamble"
-                }
-            },
-            {
-                "Metadata/NPC/Four_Act3/DoryaniEndgameTown", new NPC
-                {
-                    Name = "Doryani",
-                    Ctrl = "Identify All",
-                    Alt = "Buy / Sell"
-                }
-            },
-            {
                 "Metadata/NPC/Four_Endgame/Doryani/DoryaniEndgamePlayerWakeup", new NPC
                 {
                     Name = "Doryani",
                     Ctrl = "Identify All",
+                    Alt = "Buy / Sell",
+                    CtrlAlt = "Refund Atlas"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Endgame/Expedition/Rog", new NPC
+                {
+                    Name = "Rog",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Endgame/Expedition/Tujen", new NPC
+                {
+                    Name = "Tujen",
+                    Ctrl = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Four_Endgame/Vaal/VaalTimeScientist", new NPC
+                {
+                    Name = "Ketzuli, Architect of Time",
+                    Ctrl = "Disenchant",
                     Alt = "Buy / Sell"
                 }
             },
-            
             
             // Hideout
-            {
-                "Metadata/NPC/Hideout/Doryani", new NPC
-                {
-                    Name = "Doryani",
-                    Ctrl = "Identify All",
-                    Alt = "Buy / Sell"
-                }
-            },
             {
                 "Metadata/NPC/Hideout/BloodPriestFemale", new NPC
                 {
@@ -361,11 +353,27 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Hideout/VaalTimeScientist", new NPC
+                "Metadata/NPC/Hideout/Dannig", new NPC
                 {
-                    Name = "Ketzuli, Architect of Time",
-                    Ctrl = "Disenchant",
+                    Name = "Dannig",
+                    Ctrl = "Expedition Map",
                     Alt = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Hideout/Doryani", new NPC
+                {
+                    Name = "Doryani",
+                    Ctrl = "Identify All",
+                    Alt = "Buy / Sell",
+                    CtrlAlt = "Refund Atlas"
+                }
+            },
+            {
+                "Metadata/NPC/Hideout/Gwennen", new NPC
+                {
+                    Name = "Gwennen",
+                    Ctrl = "Buy / Sell"
                 }
             },
             {
@@ -383,18 +391,11 @@ namespace NPCShortcuts
                 }
             },
             {
-                "Metadata/NPC/Hideout/Dannig", new NPC
+                "Metadata/NPC/Hideout/VaalTimeScientist", new NPC
                 {
-                    Name = "Dannig",
-                    Ctrl = "Expedition Map",
+                    Name = "Ketzuli, Architect of Time",
+                    Ctrl = "Disenchant",
                     Alt = "Buy / Sell"
-                }
-            },
-            {
-                "Metadata/NPC/Hideout/Gwennen", new NPC
-                {
-                    Name = "Gwennen",
-                    Ctrl = "Buy / Sell"
                 }
             }
         };
