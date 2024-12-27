@@ -6,6 +6,7 @@ using ExileCore2.PoEMemory.MemoryObjects;
 using Vector2 = System.Numerics.Vector2;
 using System.Drawing;
 using System.Linq;
+using ExileCore2.Shared.Nodes;
 
 namespace NPCShortcuts
 {
@@ -18,11 +19,12 @@ namespace NPCShortcuts
 
         public override void Render()
         {
-            var labelHover = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.LabelOnHover;
-            if (labelHover == null) return;
+            if (!Settings.Enable) return; // Check if the plugin is enabled
 
+            var labelHover = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.LabelOnHover;
             var hoverPath = GameController.IngameState.IngameUi.ItemsOnGroundLabelElement.ItemOnHoverPath;
-            if (hoverPath == null) return;
+
+            if (labelHover == null || hoverPath == null) return;
 
             if (NPCDatabase.NPCDictionary.ContainsKey(hoverPath))
             {
@@ -42,20 +44,20 @@ namespace NPCShortcuts
 
             if (npc.Ctrl != null)
             {
-                segments.Add(("Ctrl", Settings.CtrlColor.Value));
-                segments.Add((": " + npc.Ctrl, Settings.TextColor.Value));
+                segments.Add(("Ctrl", GetColor(Settings.ColorSettings.CtrlColor)));
+                segments.Add((": " + npc.Ctrl, Settings.ColorSettings.TextColor.Value));
             }
 
             if (npc.Alt != null)
             {
-                segments.Add((separator + "Alt", Settings.AltColor.Value));
-                segments.Add((": " + npc.Alt, Settings.TextColor.Value));
+                segments.Add((separator + "Alt", GetColor(Settings.ColorSettings.AltColor)));
+                segments.Add((": " + npc.Alt, Settings.ColorSettings.TextColor.Value));
             }
 
             if (npc.CtrlAlt != null)
             {
-                segments.Add((separator + "CtrlAlt", Settings.CtrlAltColor.Value));
-                segments.Add((": " + npc.CtrlAlt, Settings.TextColor.Value));
+                segments.Add((separator + "CtrlAlt", GetColor(Settings.ColorSettings.CtrlAltColor)));
+                segments.Add((": " + npc.CtrlAlt, Settings.ColorSettings.TextColor.Value));
             }
 
             var fullText = string.Concat(segments.Select(s => s.text));
@@ -65,9 +67,14 @@ namespace NPCShortcuts
 
             foreach (var segment in segments)
             {
-                Graphics.DrawTextWithBackground(segment.text, new Vector2(startX, y), segment.color, Settings.BackgroundColor.Value);
+                Graphics.DrawTextWithBackground(segment.text, new Vector2(startX, y), segment.color, Settings.ColorSettings.BackgroundColor.Value);
                 startX += Graphics.MeasureText(segment.text).X;
             }
+        }
+
+        private Color GetColor(ColorNode colorNode)
+        {
+            return Settings.ColorSettings.Enabled ? colorNode.Value : Settings.ColorSettings.TextColor.Value;
         }
     }
 }
