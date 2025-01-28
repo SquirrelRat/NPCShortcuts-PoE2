@@ -50,13 +50,15 @@ namespace NPCShortcuts
 
             if (npc.Alt != null)
             {
-                segments.Add((separator + "Alt", GetColor(Settings.ColorSettings.AltColor)));
+                var altText = npc.Ctrl != null ? separator + "Alt" : "Alt";
+                segments.Add((altText, GetColor(Settings.ColorSettings.AltColor)));
                 segments.Add((": " + npc.Alt, Settings.ColorSettings.TextColor.Value));
             }
 
             if (npc.CtrlAlt != null)
             {
-                segments.Add((separator + "CtrlAlt", GetColor(Settings.ColorSettings.CtrlAltColor)));
+                var ctrlAltText = (npc.Ctrl != null) || (npc.Alt != null) ? separator + "CtrlAlt" : "CtrlAlt";
+                segments.Add((ctrlAltText, GetColor(Settings.ColorSettings.CtrlAltColor)));
                 segments.Add((": " + npc.CtrlAlt, Settings.ColorSettings.TextColor.Value));
             }
 
