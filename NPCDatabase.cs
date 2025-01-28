@@ -11,6 +11,7 @@ namespace NPCShortcuts
                 "Metadata/NPC/Four_Act1/Finn", new NPC
                 {
                     Name = "Finn",
+                    Ctrl = "Currency Exchange (Cruel)",
                     Alt = "Gamble"
                 }
             },
@@ -117,9 +118,18 @@ namespace NPCShortcuts
                 }
             },
             {
+                "Metadata/NPC/Four_Act2/HoodedMentorPostReveal", new NPC
+                {
+                    Name = "The Hooded One",
+                    Ctrl = "Identify",
+                    Alt = "Refund Passives"
+                }
+            },
+            {
                 "Metadata/NPC/Four_Act2/RisuCaravan", new NPC
                 {
                     Name = "Risu",
+                    Ctrl = "Currency Exchange (Cruel)",
                     Alt = "Gamble"
                 }
             },
@@ -287,6 +297,7 @@ namespace NPCShortcuts
                 "Metadata/NPC/Four_Endgame/Alva", new NPC
                 {
                     Name = "Alva",
+                    Ctrl ="Currency Exchange",
                     Alt = "Gamble"
                 }
             },
@@ -396,6 +407,14 @@ namespace NPCShortcuts
                     Name = "Ketzuli, Architect of Time",
                     Ctrl = "Disenchant",
                     Alt = "Buy / Sell"
+                }
+            },
+            {
+                "Metadata/NPC/Hideout/Alva", new NPC
+                {
+                    Name = "Alva",
+                    Ctrl = "Currency Exchange",
+                    Alt = "Gamble"
                 }
             }
         };
